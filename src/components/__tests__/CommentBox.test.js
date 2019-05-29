@@ -1,13 +1,18 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import CommentBox from 'components/CommentBox';
+import Root from 'Root';
 
 let wrapped;
 
 beforeEach(() => {
 	//It's not necessary to use mount here. I could use shallow, since there is no children component,
 	//but Stephen wanted to show us how to use mount.
-	wrapped = mount(<CommentBox />);
+	wrapped = mount(
+		<Root>
+			<CommentBox />
+		</Root>
+	);
 });
 
 afterEach(() => {
