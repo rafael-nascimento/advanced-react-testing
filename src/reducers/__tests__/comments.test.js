@@ -10,4 +10,12 @@ describe('Comment reducer should', () => {
         expect(changedState.length).toEqual(1)
         expect(changedState[0]).toEqual('natchos blatchos');
     })
+
+    it('handle action with unknown type', () => {
+        const action = { type: 'UNKNOWN_TYPE', payload: 'blatchos' };
+
+        const changedState = commentReducer([], action)
+        
+        expect(changedState.length).toEqual(0)
+    })
 })
