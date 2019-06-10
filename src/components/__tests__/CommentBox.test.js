@@ -20,9 +20,9 @@ afterEach(() => {
 });
 
 describe('CommentBox component', () => {
-	it('shows textarea and button elements ', () => {
+	it('shows textarea and two button elements ', () => {
 		expect(wrapped.find('textarea').length).toEqual(1);
-		expect(wrapped.find('button').length).toEqual(1);
+		expect(wrapped.find('button').length).toEqual(2);
 	});
 
 	describe('the text area', () => {
